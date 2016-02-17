@@ -1,0 +1,81 @@
+from math import *
+import time
+
+print("00110011\nA = Addition\nB = Subtraction\nC = Multiplication\nD = Division\nE = Show advanced options\nF = Exit")
+print("What do you want to do?")
+user_input = input()
+if user_input == "A" or user_input == "Addition" or user_input == "ADDITION" or user_input == "addition":
+    print("You have selected addition\nEnter first number:")
+    n1 = float(input())
+    print("Enter second number:")
+    n2 = float(input())
+    res = n1 + n2
+    print(res)
+elif user_input == "B" or user_input == "Subtraction" or user_input == "SUBTRACTION" or user_input == "subtraction":
+    print("You have selected subtraction\n""Enter first number:")
+    n3 = float(input())
+    print("Enter second number:")
+    n4 = float(input())
+    print("The result is\n", n3 - n4)
+elif user_input == "C" or user_input == "Multiplication" or user_input == "MULTIPLICATION" or user_input == "multiplication":
+    print("You have selected multiplication\n""Enter first number:")
+    n5 = float(input())
+    if n5 == 0:
+        print("Multiplying by 0 equals 0")
+    else:
+        print("Enter second number:")
+        n6 = float(input())
+        if n6 == 0:
+            print("Multiplying by 0 equals 0")
+        else:
+            print("The result is:\n", n5 * n6)
+elif user_input == "D" or user_input == "Division" or user_input == "DIVISION" or user_input == "division":
+    print("You have selected dividion\n""Enter first number:")
+    n7 = float(input())
+    if n7 == 0:
+        print("Deviding by 0 equals 0")
+    else:
+        print("Enter second number")
+        n8 = float(input())
+        if n8 == 0:
+            print("Deviding by 0 equals 0")
+        else:
+            print("The result is:\n", n7 // n8)
+            print("and the remainder is:\n", n7 % n8)
+elif user_input == "E" or user_input == "Advanced options":
+    print("1 = Finds the square root\n2 = x at the power of 2\n3 = x at the power of 3")
+    aduser_input = input()
+    if aduser_input == "1":
+        print("Enter a number:")
+        x1 = float(input())
+        if x1 <= 0:
+            print("Please enter a  valid input!")
+        else:
+            print("The result is\n", sqrt(x1))
+    elif aduser_input == "2":
+        print("Enter a number:")
+        x2 = float(input())
+        if x2 == 0:
+            print("Please enter a valid input!")
+        else:
+            print("The result is:\n", x2 * x2)
+    elif aduser_input == "3":
+        print("Enter a number:")
+        x3 = float(input())
+        if x3 == 0:
+            print("Please enter a valid input!")
+        else:
+            print("The result is:\n", x3 * x3 * x3)
+    else:
+        print("Unknown input!")
+elif user_input == "F" or user_input == "Exit" or user_input == "EXIT" or user_input == "exit":
+    print("Thanks for using the programme!")
+    time.sleep(1)
+    quit()
+elif user_input == "3":
+    print("Congratulations!\nYou found my secret.\nHere are a few lines of Hellos :)")
+    time.sleep(1)
+elif user_input == "00110011":
+    print("This is binary!")
+else:
+     print("Unknown input!")
